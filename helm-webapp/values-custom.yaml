@@ -12,6 +12,7 @@ services:
       tag: latest
 
   - appName: mysecondapp
+    replicas: 3
     port: 4444
     configmap:
       name: mysecondapp-configmap-v1
