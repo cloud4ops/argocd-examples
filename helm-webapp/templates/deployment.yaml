@@ -1,29 +1,31 @@
+{{- range $key, $value := .Values.services }}
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Values.appName }}
+  name: {{ $value.appName }}
   labels:
-    app: {{ .Values.appName }}
+    app: {{ $value.appName }}
 spec:
-  replicas: {{ .Values.replicas }}
+  replicas: {{ $value.replicas }}
   selector:
     matchLabels:
-      app: {{ .Values.appName }}
+      app: {{ $value.appName }}
       tier: frontend
   template:
     metadata:
       labels:
-        app: {{ .Values.appName }}
+        app: {{ $value.appName }}
         tier: frontend
     spec: # Pod spec
       containers:
       - name: mycontainer
-        image: "{{ .Values.image.name }}:{{ .Values.image.tag }}"
+        image: "{{ $value.image.name }}:{{ $value.image.tag }}"
         ports:
         - containerPort: 80
         envFrom:
         - configMapRef:
-            name: {{ .Values.configmap.name }}
+            name: {{ $value.configmap.name }}
         resources:
           requests:
             memory: "16Mi" 
@@ -31,3 +33,4 @@ spec:
           limits:
             memory: "128Mi"
             cpu: "100m"
+{{- end }}
