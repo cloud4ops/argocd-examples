@@ -5,7 +5,7 @@ apiVersion: v1
 metadata:
   name: {{ $value.configmap.name }}
 data:
-  BG_COLOR: {{ $value.configmap.data.BG_COLOR }}
-  FONT_COLOR: {{ $value.configmap.data.FONT_COLOR }}
-  CUSTOM_HEADER: {{ $value.configmap.data.CUSTOM_HEADER }}
+  BG_COLOR: "{{ $value.configmap.data.BG_COLOR }}"
+  FONT_COLOR: "{{ $value.configmap.data.FONT_COLOR }}"
+  CUSTOM_HEADER: "{{ $value.configmap.data.CUSTOM_HEADER }}"
 {{- end }}
