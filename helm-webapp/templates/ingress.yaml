@@ -17,7 +17,7 @@ spec:
           service:
             name: {{ $value.appName }}
             port:
-              number: {{ $value.port }}
+              number: 80
  {{- end }}
 
 
