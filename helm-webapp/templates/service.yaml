@@ -8,7 +8,7 @@ metadata:
     app: {{ $value.appName }}
 spec:
   ports:
-  - port: {{ $value.port }}
+  - port: 80
     protocol: TCP
     name: {{ $value.appName }}
   selector:
