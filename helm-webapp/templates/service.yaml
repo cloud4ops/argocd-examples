@@ -8,9 +8,9 @@ metadata:
     app: {{ $value.appName }}
 spec:
   ports:
-  - port: 80
+  - port: {{ $value.port }}
     protocol: TCP
-    name: flask
+    name: {{ $value.appName }}
   selector:
     app: {{ $value.appName }}
     tier: frontend
