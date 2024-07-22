@@ -5,8 +5,8 @@ services:
       name: myfirstapp-configmap-v1
       data:
         CUSTOM_HEADER: 'This is first app!'
-        BG_COLOR: 'red'
-        FONT_COLOR: 'white'
+        BG_COLOR: '#1abe93'
+        FONT_COLOR: '#be1a1a'
     image:
       name: devopsjourney1/mywebapp
       tag: latest
@@ -18,8 +18,8 @@ services:
       name: mysecondapp-configmap-v1
       data:
         CUSTOM_HEADER: 'This is second app!'
-        BG_COLOR: 'blue'
-        FONT_COLOR: 'black'
+        BG_COLOR: '#1abe93'
+        FONT_COLOR: '#be1a1a'
     image:
       name: devopsjourney1/mywebapp
       tag: latest
