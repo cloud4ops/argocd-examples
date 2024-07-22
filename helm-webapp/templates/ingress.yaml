@@ -19,3 +19,6 @@ spec:
             name: {{ $value.appName }}
             port:
               number: 80
+{{- end }}
+
+
