@@ -18,7 +18,7 @@ services:
       name: mysecondapp-configmap-v1
       data:
         CUSTOM_HEADER: 'This is second app!'
-        BG_COLOR: '#1abe93'
+        BG_COLOR: 'white'
         FONT_COLOR: '#be1a1a'
     image:
       name: devopsjourney1/mywebapp
